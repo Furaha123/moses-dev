@@ -59,7 +59,7 @@ const Contact = () => {
               <span className="contact__card-data">(+2507-80-163267)</span>
 
               <a
-                href="https://wa.me/250788634357"
+                href="https://wa.me/250780163267"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__button"

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./about.css";
-import AboutImg from "../../assets/moses.png";
+import AboutImg from "../../assets/profile1.jpg";
 import Info from "./Info";
 import CV from "../../assets/MY CV.pdf";
 import Resume from "../../assets/MY CV.pdf";

@@ -40,7 +40,7 @@
   margin-bottom: var(--mb-3);
 }
 .home__img {
-  background: url(../../assets/moses.png);
+  background: url(../../assets/profile1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -49,7 +49,7 @@
   justify-self: center;
   width: 300px;
   height: 410px;
-  border-radius: 35%;
+  border-radius: 10px;
 }
 
 /* @keyframes profile__animate {

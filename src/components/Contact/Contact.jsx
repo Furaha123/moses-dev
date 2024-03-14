@@ -45,7 +45,7 @@ const Contact = () => {
               </span>
 
               <a
-                href="mailto:faidterence@outlook.com"
+                href="mailto:furahamoses41@gmail.com"
                 className="contact__button"
               >
                 Write me

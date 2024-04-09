@@ -7,7 +7,7 @@ import Work6 from "../../assets/sample.png";
 import Work7 from "../../assets/flix2.png";
 import Work8 from "../../assets/smoothies.png";
 import Work9 from "../../assets/drive-clone.png";
-import ticknet from "../../assets/ticknet2.png";
+import ticknet from "../../assets/baza-farm.png";
 import oman from "../../assets/service4.jpg";
 import resume from "../../assets/myCV.pdf";
 import afriConnect from "../../assets/chat-image.png";
@@ -29,9 +29,9 @@ export const projectsData = [
   {
     id: 3,
     image: ticknet,
-    title: "Ticknet (Under Development)",
-    category: "web",
-    link: "https://eve-ease.vercel.app/",
+    title: "Baza Farm(IoT) (Under Development)",
+    category: "Io",
+    link: "https://github.com/Baza-Farm/Bazafarm-frontend-v2",
   },
 
   {

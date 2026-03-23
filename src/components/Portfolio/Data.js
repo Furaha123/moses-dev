@@ -1,6 +1,5 @@
 import Work1 from "../../assets/predators.png";
 import Work2 from "../../assets/my_e_ecomm.png";
-// import Work3 from "../../assets/faid-flix.png";
 import Work4 from "../../assets/Doctor-book.png";
 import Work5 from "../../assets/holiday-image.jpg";
 import Work6 from "../../assets/sample.png";
@@ -9,35 +8,34 @@ import Work8 from "../../assets/smoothies.png";
 import Work9 from "../../assets/drive-clone.png";
 import ticknet from "../../assets/baza-farm.png";
 import oman from "../../assets/service4.jpg";
-import resume from "../../assets/myCV.pdf";
 import afriConnect from "../../assets/chat-image.png";
+
 export const projectsData = [
   {
     id: 1,
     image: afriConnect,
     title: "Real time Chat App",
-    category: "Front-end",
+    category: "web",
     link: "https://real-chat12.netlify.app/",
   },
   {
     id: 2,
     image: oman,
     title: "Legal Technologies",
-    category: "Front-end",
+    category: "web",
     link: "https://legal-tech-seven.vercel.app/",
   },
   {
     id: 3,
     image: ticknet,
-    title: "Baza Farm(IoT) (Under Development)",
-    category: "Io",
+    title: "Baza Farm (IoT)",
+    category: "iot",
     link: "https://github.com/Baza-Farm/Bazafarm-frontend-v2",
   },
-
   {
     id: 4,
     image: Work9,
-    title: "DriveX (Google Drive clone)",
+    title: "DriveX (Google Drive Clone)",
     category: "web",
     link: "https://google-drive-clone-faid.vercel.app/",
   },
@@ -53,7 +51,7 @@ export const projectsData = [
     image: Work1,
     title: "E-commerce Web Design (UI/UX)",
     category: "design",
-    link: "https://www.figma.com/file/uIqHkoLiY4wwAFojUDocwF/Ecommerce_predators?type=design&node-id=0-1&mode=design&t=irFwLCRcoqxehF5G-0  ",
+    link: "https://www.figma.com/file/uIqHkoLiY4wwAFojUDocwF/Ecommerce_predators?type=design&node-id=0-1&mode=design&t=irFwLCRcoqxehF5G-0",
   },
   {
     id: 7,
@@ -65,8 +63,8 @@ export const projectsData = [
   {
     id: 8,
     image: Work5,
-    title: "Travel with us and explore the world ",
-    category: "Web",
+    title: "Travel With Us",
+    category: "web",
     link: "https://holiday-planners.netlify.app/",
   },
   {
@@ -76,11 +74,10 @@ export const projectsData = [
     category: "app",
     link: "https://faid-terence.github.io/My-Ecommerce-App-Frontend/",
   },
-
   {
     id: 10,
     image: Work8,
-    title: "Terence Smoothies(Auth)",
+    title: "Terence Smoothies",
     category: "design",
     link: "https://copper-armadillo-kilt.cyclic.app/",
   },
@@ -94,16 +91,9 @@ export const projectsData = [
 ];
 
 export const projectsNav = [
-  {
-    name: "all",
-  },
-  {
-    name: "web",
-  },
-  {
-    name: "app",
-  },
-  {
-    name: "design",
-  },
+  { name: "all" },
+  { name: "web" },
+  { name: "app" },
+  { name: "iot" },
+  { name: "design" },
 ];

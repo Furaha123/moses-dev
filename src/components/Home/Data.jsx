@@ -61,7 +61,7 @@ const Data = () => {
         TypeScript. Passionate about translating UI/UX designs into responsive,
         pixel-perfect interfaces and delivering impactful digital solutions.
       </p>
-      <a href="" className="button button--flex">
+      <a href="#contact" className="button button--flex">
         Say Hello
         <svg
           className="button__icon"

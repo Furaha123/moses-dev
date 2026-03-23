@@ -8,6 +8,15 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
+    const name = form.current.name.value.trim();
+    const email = form.current.email.value.trim();
+    const project = form.current.project.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!name) return toast.error("Please enter your name.");
+    if (!email || !emailRegex.test(email)) return toast.error("Please enter a valid email.");
+    if (!project) return toast.error("Please describe your project.");
+
     try {
       const response = await emailjs.sendForm(
         "service_igkkgln",

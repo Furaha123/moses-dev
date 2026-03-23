@@ -1,8 +1,18 @@
 import { useState, useEffect } from "react";
 import "./header.css";
 
+const navLinks = [
+  { href: "#home",      label: "Home",       icon: "uil-estate",       id: "home" },
+  { href: "#about",     label: "About",      icon: "uil-user",         id: "about" },
+  { href: "#skills",    label: "Skills",     icon: "uil-user",         id: "skills" },
+  { href: "#services",  label: "Services",   icon: "uil-briefcase-alt",id: "services" },
+  { href: "#portfolio", label: "Portfolio",  icon: "uil-scenery",      id: "portfolio" },
+  { href: "#contact",   label: "Contact Me", icon: "uil-message",      id: "contact" },
+];
+
 const Header = () => {
   const [Toggle, showMenu] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const [darkTheme, setDarkTheme] = useState(
     () => localStorage.getItem("theme") === "dark"
   );
@@ -17,49 +27,41 @@ const Header = () => {
     }
   }, [darkTheme]);
 
+  useEffect(() => {
+    const observers = [];
+    navLinks.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
+        { threshold: 0.4 }
+      );
+      observer.observe(el);
+      observers.push(observer);
+    });
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="" className="nav__logo">
-          Moses Furaha
-        </a>
+        <a href="#home" className="nav__logo">Moses Furaha</a>
+
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
-            <li className="nav__item">
-              <a href="" className="nav__link">
-                <i className="uil uil-estate nav__icon active-link"></i> Home
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#about" className="nav__link">
-                <i className="uil uil-user nav__icon"></i> About
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#skills" className="nav__link">
-                <i className="uil uil-user nav__icon"></i> Skills
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#services" className="nav__link">
-                <i className="uil uil-briefcase-alt nav__icon"></i> Services
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#portfolio" className="nav__link">
-                <i className="uil uil-scenery nav__icon"></i> Portfolio
-              </a>
-            </li>
-            <li className="nav__item">
-              <a href="#contact" className="nav__link">
-                <i className="uil uil-message nav__icon"></i> Contact Me
-              </a>
-            </li>
+            {navLinks.map(({ href, label, icon, id }) => (
+              <li className="nav__item" key={id}>
+                <a
+                  href={href}
+                  className={`nav__link ${activeSection === id ? "active-link" : ""}`}
+                  onClick={() => showMenu(false)}
+                >
+                  <i className={`uil ${icon} nav__icon`}></i> {label}
+                </a>
+              </li>
+            ))}
           </ul>
-          <i
-            className="uil uil-times nav__close"
-            onClick={() => showMenu(!Toggle)}
-          ></i>
+          <i className="uil uil-times nav__close" onClick={() => showMenu(false)}></i>
         </div>
 
         <div className="nav__dark">

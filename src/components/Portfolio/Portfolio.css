@@ -13,8 +13,9 @@
     border-radius: 0.5rem;
     text-transform: capitalize;
 }
-.work__item:hover{
-    background-color:  var(--title-color);
+.work__item:hover,
+.active-work {
+    background-color: var(--title-color);
     color: var(--container-color);
 }
 .work__container{
@@ -29,7 +30,7 @@
 }
 .work__card{
     background-color: var(--container-color);
-    border: 1pxsolid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1.25rem; 
     border-radius: 1rem;
 }

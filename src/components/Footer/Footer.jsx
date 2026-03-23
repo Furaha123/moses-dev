@@ -50,7 +50,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <span className="footer__copy">&#169; Furaha MOses 2023</span>
+        <span className="footer__copy">&#169; Furaha Moses {new Date().getFullYear()}</span>
       </div>
     </footer>
   );

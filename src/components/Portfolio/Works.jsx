@@ -1,48 +1,61 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { projectsData, projectsNav } from "./Data";
 import WorkItems from "./WorkItems";
 
 const Works = () => {
-  const projectsPerPage = 4;
+  const [activeFilter, setActiveFilter] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 4;
 
-  const totalProjects = projectsData.length;
-  const totalPages = Math.ceil(totalProjects / projectsPerPage);
+  const filtered =
+    activeFilter === "all"
+      ? projectsData
+      : projectsData.filter((p) => p.category === activeFilter);
 
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
-  const visibleProjects = projectsData.slice(
+  const totalPages = Math.ceil(filtered.length / projectsPerPage);
+  const visibleProjects = filtered.slice(
     (currentPage - 1) * projectsPerPage,
     currentPage * projectsPerPage
   );
+
+  const handleFilter = (name) => {
+    setActiveFilter(name);
+    setCurrentPage(1);
+  };
 
   return (
     <>
       <div className="work__filters">
         {projectsNav.map((item, index) => (
-          <span className="work__item" key={index}>
+          <span
+            className={`work__item ${activeFilter === item.name ? "active-work" : ""}`}
+            key={index}
+            onClick={() => handleFilter(item.name)}
+          >
             {item.name}
           </span>
         ))}
       </div>
+
       <div className="work__container container grid">
         {visibleProjects.map((item) => (
           <WorkItems item={item} key={item.id} />
         ))}
       </div>
-      <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <span
-            key={index}
-            onClick={() => handlePageChange(index + 1)}
-            className={currentPage === index + 1 ? "active" : ""}
-          >
-            {index + 1}
-          </span>
-        ))}
-      </div>
+
+      {totalPages > 1 && (
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <span
+              key={index}
+              onClick={() => setCurrentPage(index + 1)}
+              className={currentPage === index + 1 ? "active" : ""}
+            >
+              {index + 1}
+            </span>
+          ))}
+        </div>
+      )}
     </>
   );
 };

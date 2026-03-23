@@ -3,6 +3,8 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { db } from "../../firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 const Contact = () => {
   const form = useRef();
   const sendEmail = async (e) => {
@@ -26,10 +28,16 @@ const Contact = () => {
       );
 
       if (response.status === 200) {
-        toast.success("Email sent successfully!");
+        await addDoc(collection(db, "messages"), {
+          name: form.current.name.value.trim(),
+          email: form.current.email.value.trim(),
+          project: form.current.project.value.trim(),
+          createdAt: serverTimestamp(),
+        });
+        toast.success("Message sent successfully!");
         e.target.reset();
       } else {
-        toast.error("Failed to send email. Please try again.");
+        toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error("Error sending email:", error);

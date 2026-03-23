@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#services",  label: "Services",   icon: "uil-briefcase-alt",id: "services" },
   { href: "#portfolio", label: "Portfolio",  icon: "uil-scenery",      id: "portfolio" },
   { href: "#contact",   label: "Contact Me", icon: "uil-message",      id: "contact" },
+  { href: "#comments",  label: "Comments",   icon: "uil-comment-alt",  id: "comments" },
 ];
 
 const Header = () => {

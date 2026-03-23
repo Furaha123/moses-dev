@@ -1,5 +1,5 @@
 import Backend from "./Backend"
-import Frontend from "./Frontend"
+import CloudDevOps from "./CloudDevOps"
 import "./skills.css"
 
 const Skills = () => {
@@ -9,8 +9,8 @@ const Skills = () => {
         <span className="section__subtitle">My Technical level</span>
 
         <div className="skills__container container grid">
-            <Frontend/>
             <Backend/>
+            <CloudDevOps/>
         </div>
     </section>
   )

@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./header.css";
+
 const Header = () => {
   const [Toggle, showMenu] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(
+    () => localStorage.getItem("theme") === "dark"
+  );
+
+  useEffect(() => {
+    if (darkTheme) {
+      document.body.classList.add("dark-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark-theme");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkTheme]);
 
   return (
     <header className="header">
       <nav className="nav container">
         <a href="" className="nav__logo">
-          Moses Dev
+          Moses Furaha
         </a>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
@@ -45,6 +59,13 @@ const Header = () => {
           <i
             className="uil uil-times nav__close"
             onClick={() => showMenu(!Toggle)}
+          ></i>
+        </div>
+
+        <div className="nav__dark">
+          <i
+            className={darkTheme ? "uil uil-sun change-theme" : "uil uil-moon change-theme"}
+            onClick={() => setDarkTheme(!darkTheme)}
           ></i>
         </div>
 

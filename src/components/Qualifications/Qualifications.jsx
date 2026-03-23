@@ -29,31 +29,31 @@ const Qualifications = () => {
             className={
               toggleState === 2
                 ? "qualification__button qualification__active button--flex"
-                : "qualification__button qualification__active button--flex"
+                : "qualification__button button--flex"
             }
             onClick={() => toggleTab(2)}
           >
-            <i className="uil uil-briefcase-alt qualification__icon"></i>
+            <i className="uil uil-briefcase-alt qualification__icon"></i>{" "}
             Experience
           </div>
         </div>
 
         <div className="qualification__secctions">
+
+          {/* EDUCATION TAB */}
           <div
             className={
               toggleState === 1
                 ? "qualification__content qualification__content-active"
-                : "qualification__active"
+                : "qualification__content"
             }
           >
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Computer Engineering</h3>
-                <span className="qualification__subtitle">
-                  University of Rwanda
-                </span>
+                <h3 className="qualification__title">BSc Computer Engineering (Honours)</h3>
+                <span className="qualification__subtitle">University of Rwanda</span>
                 <div className="qualification__calender">
-                  <i className="uil uil-calendar-alt"></i> 2021 - 2023
+                  <i className="uil uil-calendar-alt"></i> March 2021 - March 2024
                 </div>
               </div>
               <div>
@@ -64,30 +64,25 @@ const Qualifications = () => {
 
             <div className="qualification__data">
               <div></div>
-
               <div>
                 <span className="qualification__rounder"></span>
                 <span className="qualification__line"></span>
               </div>
               <div>
-                <h3 className="qualification__title">Trainee</h3>
-                <span className="qualification__subtitle">
-                  KLAB-ICT CHAMBER
-                </span>
+                <h3 className="qualification__title">Certified AWS Cloud Practitioner</h3>
+                <span className="qualification__subtitle">Amazon Web Services</span>
                 <div className="qualification__calender">
-                  <i className="uil uil-calendar-alt"></i> 2023 - 2024
+                  <i className="uil uil-calendar-alt"></i> 2024
                 </div>
               </div>
             </div>
 
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Computer Science</h3>
-                <span className="qualification__subtitle">
-                  edX (CS50-Online)
-                </span>
+                <h3 className="qualification__title">Certified Angular Developer</h3>
+                <span className="qualification__subtitle">Angular Certification</span>
                 <div className="qualification__calender">
-                  <i className="uil uil-calendar-alt"></i> AUG 2021 - DEC 2022
+                  <i className="uil uil-calendar-alt"></i> 2024
                 </div>
               </div>
               <div>
@@ -98,53 +93,70 @@ const Qualifications = () => {
 
             <div className="qualification__data">
               <div></div>
-
               <div>
                 <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
               </div>
               <div>
-                <h3 className="qualification__title">Software Developer</h3>
-                <span className="qualification__subtitle">Stes Group Ltd</span>
+                <h3 className="qualification__title">Certified React Developer</h3>
+                <span className="qualification__subtitle">React Certification</span>
                 <div className="qualification__calender">
-                  <i className="uil uil-calendar-alt"></i> 2024 - Present
-                </div>
-              </div>
-            </div>
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">
-                  Math-Physics and Computer Science
-                </h3>
-                <span className="qualification__subtitle">
-                  New Life Christian Academy
-                </span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calendar-alt"></i> 2016 - 2019
-                </div>
-              </div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
-
-            <div className="qualification__data new">
-              <div></div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-              <div>
-                <h3 className="qualification__title">Full Stack Developer</h3>
-                <span className="qualification__subtitle">Andela Rwanda</span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calendar-alt"></i> 2022 - 2024
+                  <i className="uil uil-calendar-alt"></i> 2024
                 </div>
               </div>
             </div>
           </div>
+
+          {/* EXPERIENCE TAB */}
+          <div
+            className={
+              toggleState === 2
+                ? "qualification__content qualification__content-active"
+                : "qualification__content"
+            }
+          >
+            <div className="qualification__data">
+              <div>
+                <h3 className="qualification__title">DevOps Upskilling Program</h3>
+                <span className="qualification__subtitle">AmaliTech</span>
+                <div className="qualification__calender">
+                  <i className="uil uil-calendar-alt"></i> Sept 2025 - Dec 2025
+                </div>
+              </div>
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+            </div>
+
+            <div className="qualification__data">
+              <div></div>
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+              <div>
+                <h3 className="qualification__title">Software Developer — Angular/NestJS</h3>
+                <span className="qualification__subtitle">AmaliTech</span>
+                <div className="qualification__calender">
+                  <i className="uil uil-calendar-alt"></i> July 2025 - Present
+                </div>
+              </div>
+            </div>
+
+            <div className="qualification__data">
+              <div>
+                <h3 className="qualification__title">Angular Front End Developer</h3>
+                <span className="qualification__subtitle">Amalitech Graduate Training Program</span>
+                <div className="qualification__calender">
+                  <i className="uil uil-calendar-alt"></i> June 2024 - Jan 2025
+                </div>
+              </div>
+              <div>
+                <span className="qualification__rounder"></span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

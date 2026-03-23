@@ -1,22 +1,14 @@
-const Frontend = () => {
+const CloudDevOps = () => {
   return (
     <div className="skills__content">
-      <h3 className="skills__title">Frontend & UI/UX</h3>
+      <h3 className="skills__title">Cloud & DevOps</h3>
 
       <div className="skills__box">
         <div className="skills__group">
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">Angular</h3>
-              <span className="skills__level">Advanced</span>
-            </div>
-          </div>
-
-          <div className="skills__data">
-            <i className="bx bx-badge-check"></i>
-            <div>
-              <h3 className="skills__name">React.js</h3>
+              <h3 className="skills__name">AWS</h3>
               <span className="skills__level">Intermediate</span>
             </div>
           </div>
@@ -24,7 +16,15 @@ const Frontend = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">JavaScript</h3>
+              <h3 className="skills__name">Amazon ECS</h3>
+              <span className="skills__level">Beginner</span>
+            </div>
+          </div>
+
+          <div className="skills__data">
+            <i className="bx bx-badge-check"></i>
+            <div>
+              <h3 className="skills__name">Cloud Storage</h3>
               <span className="skills__level">Intermediate</span>
             </div>
           </div>
@@ -32,8 +32,8 @@ const Frontend = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">Product Design</h3>
-              <span className="skills__level">Intermediate</span>
+              <h3 className="skills__name">AWS Bedrock</h3>
+              <span className="skills__level">Beginner</span>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Frontend = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">Figma</h3>
+              <h3 className="skills__name">CI/CD Pipelines</h3>
               <span className="skills__level">Intermediate</span>
             </div>
           </div>
@@ -50,7 +50,7 @@ const Frontend = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">Tailwind CSS</h3>
+              <h3 className="skills__name">Docker</h3>
               <span className="skills__level">Intermediate</span>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Frontend = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">NgRx Signals</h3>
+              <h3 className="skills__name">Terraform</h3>
               <span className="skills__level">Intermediate</span>
             </div>
           </div>
@@ -66,8 +66,24 @@ const Frontend = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">UX Design</h3>
+              <h3 className="skills__name">Jenkins</h3>
               <span className="skills__level">Intermediate</span>
+            </div>
+          </div>
+
+          <div className="skills__data">
+            <i className="bx bx-badge-check"></i>
+            <div>
+              <h3 className="skills__name">Cloud Architecture</h3>
+              <span className="skills__level">Intermediate</span>
+            </div>
+          </div>
+
+          <div className="skills__data">
+            <i className="bx bx-badge-check"></i>
+            <div>
+              <h3 className="skills__name">Cloud Practitioner</h3>
+              <span className="skills__level">Certified Level</span>
             </div>
           </div>
         </div>
@@ -76,4 +92,4 @@ const Frontend = () => {
   );
 };
 
-export default Frontend;
+export default CloudDevOps;

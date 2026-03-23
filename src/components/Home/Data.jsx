@@ -1,7 +1,7 @@
 const Data = () => {
   return (
     <div className="home__data">
-      <h1 className="home__title">F Moses Dev</h1>
+      <h1 className="home__title">Moses Furaha</h1>
       <svg
         width="36"
         height="36"
@@ -53,14 +53,13 @@ const Data = () => {
       </svg>
 
       <h3 className="home__subtitle">
-        Full Stack Developer || Mobile App Developer || Web Designer
+        Full Stack Developer || Angular & React || Cloud & DevOps
       </h3>
       <p className="home__description">
-        Greetings! As a seasoned professional adept in Fullstack Development,
-        Mobile App Development, and Web Design, I possess a wealth of expertise
-        in these realms. With a keen eye for detail and a passion for
-        innovation, I specialize in translating concepts into impactful digital
-        solutions.
+        Software Engineer with 3+ years of experience building visually
+        appealing, scalable web applications using Angular, React.js, and
+        TypeScript. Passionate about translating UI/UX designs into responsive,
+        pixel-perfect interfaces and delivering impactful digital solutions.
       </p>
       <a href="" className="button button--flex">
         Say Hello

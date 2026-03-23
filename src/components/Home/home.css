@@ -17,8 +17,9 @@
   color: var(--title-color);
 }
 .home__title {
-  font-size: var(--big-font-size);
+  font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
+  white-space: nowrap;
 }
 .home__hand {
   width: 38px;
@@ -40,7 +41,7 @@
   margin-bottom: var(--mb-3);
 }
 .home__img {
-  background: url(../../assets/profile1.jpg);
+  background: url(../../assets/profile-removebg-preview.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -63,6 +64,41 @@
         border-radius: 60% 40% 30% 70% 60% 30% 70% 40%;
     }
 } */
+/*=============== SCROLL DOWN ===============*/
+.home__scroll {
+  display: flex;
+  justify-content: center;
+}
+
+.home__scroll-button {
+  color: var(--title-color);
+  transition: 0.3s;
+}
+
+.home__scroll-button:hover {
+  transform: translateY(0.25rem);
+}
+
+.home__scroll-mouse {
+  animation: scroll-down 2s ease infinite;
+}
+
+.wheel {
+  animation: wheel-scroll 2s ease infinite;
+}
+
+@keyframes scroll-down {
+  0%   { opacity: 1; transform: translateY(0); }
+  50%  { opacity: 0.6; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wheel-scroll {
+  0%   { transform: translateY(0); opacity: 1; }
+  50%  { transform: translateY(8px); opacity: 0.4; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
 /* For large devices*/
 @media screen and (max-width: 992px) {
   .home__content {

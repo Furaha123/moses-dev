@@ -50,6 +50,32 @@
   --z-modal: 1000;
 }
 
+/*=============== DARK THEME ===============*/
+body.dark-theme {
+  --title-color: hsl(var(--hue), var(--sat), 95%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 100%);
+  --text-color: hsl(var(--hue), var(--sat), 65%);
+  --body-color: hsl(var(--hue), var(--sat), 12%);
+  --container-color: hsl(var(--hue), var(--sat), 16%);
+}
+
+/*=============== DARK THEME TOGGLE BUTTON ===============*/
+.nav__dark {
+  display: flex;
+  align-items: center;
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.change-theme:hover {
+  color: var(--title-color-dark);
+}
+
 .pagination {
   display: flex;
   justify-content: center;

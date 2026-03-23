@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./about.css";
-import AboutImg from "../../assets/profile1.jpg";
+import AboutImg from "../../assets/profile-removebg-preview.png";
 import Info from "./Info";
 import CV from "../../assets/MY CV.pdf";
-import Resume from "../../assets/MY CV.pdf";
+import Resume from "../../assets/furaha-moses-cv.pdf";
 const About = () => {
   return (
     <section className="about section" id="about">
@@ -14,12 +14,15 @@ const About = () => {
         <div className="about__data">
           <Info />
           <p className="about__decription">
-            Hello! I'm an experienced Fullstack Developer, Mobile Developer, and
-            Web Designer. I excel in creating intuitive, engaging digital
-            solutions. Skilled in various programming languages and platforms,
-            I'm passionate about turning ideas into reality, ensuring optimal
-            functionality and user experience. I love coding, designing, and
-            constantly learning to stay ahead of tech trends.
+            Software Engineer with 3+ years of experience building visually
+            appealing, highly interactive, and scalable web applications using
+            Angular, React.js, Next.js, and modern JavaScript/TypeScript.
+            Strong background in component-driven architecture, reusable UI
+            systems, REST and GraphQL integrations, and performance
+            optimization. Experienced in collaborating with designers, backend
+            engineers, and product teams in fast-paced startup and enterprise
+            environments, taking ownership of features from concept through
+            production release.
           </p>
           <a download="" href={Resume} className="button button--flex download">
             Download CV

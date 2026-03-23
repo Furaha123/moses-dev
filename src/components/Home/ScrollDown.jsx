@@ -27,7 +27,8 @@ const ScrollDown = () => {
             style={{
               fill: "none",
               stroke: "var(--title-color)",
-              strokeWwidth: "20px",
+              strokeWidth: "24px",
+              strokeLinecap: "round",
             }}
           ></path>
           <path
@@ -36,7 +37,7 @@ const ScrollDown = () => {
             style={{
               fill: "none",
               stroke: "var(--title-color)",
-              strokeWwidth: "20px",
+              strokeWidth: "24px",
             }}
           ></path>
         </svg>

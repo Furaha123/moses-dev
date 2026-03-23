@@ -250,7 +250,7 @@ img {
 /* For medium devices */
 @media screen and (max-width: 768px) {
   body {
-    margin: 0 0 var(--header-height) 0;
+    margin: var(--header-height) 0 0 0;
   }
 
   .section {

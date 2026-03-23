@@ -39,6 +39,10 @@
 .nav__toggle{
     display: none;
 }
+
+.nav__overlay {
+    display: none;
+}
 .active-link,
 .nav__link:hover {
     color: var(--title-color-dark);
@@ -46,60 +50,68 @@
 
 @media screen and (max-width: 768px) {
     .header{
-        top: initial;
-        bottom: 0;
+        top: 0;
+        bottom: initial;
     }
     .nav{
         height: var(--header-height);
     }
     .nav__menu{
         position: fixed;
-        bottom: -100%;
+        top: -100%;
         left: 0;
         width: 100%;
         background-color: var(--body-color);
-        padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+        padding: 4rem 1.5rem 2rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 0 0 1.5rem 1.5rem;
         transition: .3s;
+        z-index: var(--z-fixed);
     }
     .show-menu{
-        bottom: 0;
+        top: 0;
     }
     .nav__list{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem 0.5rem;
+    }
+    .nav__item{
+        text-align: center;
+    }
+    .nav__link{
+        flex-direction: column;
+        font-size: 0.7rem;
+        row-gap: 0.25rem;
     }
     .nav__icon{
         font-size: 1.2rem;
-    }
-    .nav__close{
-        position: absolute;
-        right: 1.3rem;
-        bottom: .5rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--title-color);
-    }
-    .nav__close:hover{
-        color: var(--title-color-dark);
-    }
-    .nav__toggle{
-        font-size: 1.1rem;
-        cursor: pointer;
-    }
-    .nav__icon,
-    .nav__close,
-    .nav__toggle{
         display: block;
     }
-    
+    .nav__close{
+        display: none;
+    }
+    .nav__toggle{
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    .nav__toggle,
+    .nav__icon{
+        display: block;
+    }
+    .nav__overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: calc(var(--z-fixed) - 1);
+    }
 }
 @media screen and (max-width: 350px) {
     .nav__menu{
-        padding: 2rem 0.25rem 4rem;
+        padding: 1.5rem 0.5rem 3rem;
     }
     .nav__list{
-        column-gap: 0;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem 0.25rem;
     }
 }

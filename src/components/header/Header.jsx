@@ -48,6 +48,8 @@ const Header = () => {
       <nav className="nav container">
         <a href="#home" className="nav__logo">Moses Furaha</a>
 
+        {Toggle && <div className="nav__overlay" onClick={() => showMenu(false)}></div>}
+
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             {navLinks.map(({ href, label, icon, id }) => (
@@ -62,7 +64,6 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <i className="uil uil-times nav__close" onClick={() => showMenu(false)}></i>
         </div>
 
         <div className="nav__dark">
@@ -73,7 +74,7 @@ const Header = () => {
         </div>
 
         <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-          <i className="uil uil-apps"></i>
+          <i className={Toggle ? "uil uil-times" : "uil uil-bars"}></i>
         </div>
       </nav>
     </header>
